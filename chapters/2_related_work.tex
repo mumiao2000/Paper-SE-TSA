@@ -1,0 +1,19 @@
+\section{Related Work}
+
+\subsection{Hand-Crafted Models and Foundation Models}
+
+A large number of research has focused on manually designed architectures for time-series forecasting~\cite{CrossLinear,TimesNet,Duet,TimeXer}. For example, DUET~\cite{Duet} adpots dual clustering on the temporal and channel dimensions to enhance multivariate time series forecasting. PatchTST~\cite{PatchTST} divides time series into local patches and adopts a channel-independent processing strategy, achieving substantial loss reductions over standard Transformer baselines.% TimeXer~\cite{TimeXer} further introduces patch-wise and variate-wise attention mechanisms to better integrate endogenous and exogenous information.
+
+Despite their strong empirical performance, these methods share an inherent limitation: their architectures are manually designed based on human assumptions, such as periodic decomposition patterns or inter-variable dependencies. As a result, their effectiveness may deteriorate when applied to datasets with substantially different distributions.% In addition, hand-crafted architecture design requires extensive domain expertise and iterative tuning. Once constructed, the resulting models remain static and can hardly adapt to new datasets without additional redesign and optimization.
+
+Recent time-series foundation models trained on large-scale datasets, such as Sundial~\cite{Sundial}, Chronos~\cite{Chronos,Chronos2}, and TimesFM~\cite{TimesFM}, exhibit improved generalization ability and certain zero-shot forecasting capabilities. Nevertheless, they still encounter similar challenges when facing previously unseen datasets with distinct distributional properties.
+
+\subsection{LLM-Based Forecasting Models and Agents}
+
+Recent studies have explored incorporating LLMs into time-series forecasting by transforming numerical sequences into textual representations. For instance, Time-LLM~\cite{TimeLLM} introduces a reprogramming framework that adapts pretrained LLMs for forecasting tasks without modifying the backbone LLM. However, LLMs lack temporal inductive biases, thereby exhibit unstable performance across datasets.
+
+More recently, agent-based systems have been proposed to automate the forecasting pipeline. TimeCopilot~\cite{TimeCopilot} integrates multiple time-series models with LLMs, enabling automated feature analysis, model selection, and forecast generation. TimeSeriesScientist~\cite{TimeSeriesScientist} proposes a multi-agent system composed of Curator, Planner, Forecaster, and Reporter agents, which collaboratively perform forecasting with report generation. Nevertheless, these agent systems primarily function as orchestration frameworks rather than architecture creation frameworks, which limits their adaptability and performance potential.
+
+\subsection{Quality-Diversity Optimization}
+
+QD optimization aims to generate diverse collections of high-performing solutions distributed across a predefined behavior regions. A representative example is MAP-Elites~\cite{MAP_Elites}, which maintains an archive of elite solutions over multi-dimensional regions, simultaneously preserving behavioral diversity and improving solution quality within each region. QD algorithms have been widely applied to neural architecture search~\cite{neural_architecture_search} and neuroevolution~\cite{neuroevolution}, where diversity preservation across architectural families helps mitigate convergence to local optima.

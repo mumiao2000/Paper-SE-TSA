@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+
+% \usepackage[preprint]{acl}
+\usepackage[preprint]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+
+% Custom
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{amsmath,amssymb}
+\usepackage{fvextra}
+
+\definecolor{bestred}{RGB}{255,230,230}
+\definecolor{secondblue}{RGB}{230,242,255}
+
+\newcommand{\best}[1]{\cellcolor{bestred}\textbf{#1}}
+\newcommand{\second}[1]{\cellcolor{secondblue}#1}
+
+\title{Self-Evolving Time-Series Agent: Automatic Architecture Creation\\ Based on Large Language Models}
+
+\author{
+  \textbf{Pengfei Zhou\textsuperscript{1}},
+  \textbf{Junli Liang\textsuperscript{1}},
+  \textbf{Jiayuan Chen\textsuperscript{2}},
+  \textbf{Rong Lin\textsuperscript{1}},
+  \textbf{Ziwen Wang\textsuperscript{1}},
+\\
+  \textbf{Ping Zhang\textsuperscript{2}},
+  \textbf{Wangqiu Zhou\textsuperscript{3}},
+  \textbf{Qi Song\textsuperscript{1}\thanks{\hspace{0.5mm}Correspondence}}
+\\
+  \textsuperscript{1}University of Science and Technology of China,
+\\
+  \textsuperscript{2}The Ohio State University,
+  \textsuperscript{3}Hefei University of Technology
+\\
+  \texttt{\{pengfeizhou,jlliang\}@mail.ustc.edu.cn},
+  \texttt{chen.12930@osu.edu},
+\\
+  \texttt{\{lr\_maxleo,wangziwen\}@mail.ustc.edu.cn},
+  \texttt{zhang.10631@osu.edu},
+\\
+  \texttt{rafazwq@mail.ustc.edu.cn},
+  \texttt{qisong09@ustc.edu.cn}
+}
+
+\begin{document}
+\maketitle
+\input{chapters/0_abstract}
+
+\input{chapters/1_introduction}
+\input{chapters/2_related_work}
+\input{chapters/3_methodology}
+\input{chapters/4_experiments}
+\input{chapters/5_conclusion}
+
+\input{chapters/6_limitations}
+
+\bibliography{custom}
+
+\clearpage
+\appendix
+\input{chapters/appendix}
+
+\end{document}
